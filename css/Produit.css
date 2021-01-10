@@ -175,25 +175,17 @@ nav > ul li:hover .sous{
 .page_produit /*arrière-plan */ 
 {
     background-color: #e9cb89;
+    width: 100%;
     height: 50em;
     margin: 3em 0em;
+    display: flex;
   
 }
 
-
-.produit /*grille de produits*/ 
+.produit
 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    padding-top: 2em;
-    margin-right: 10em;
-}
-
-.sous_produit img /* dimension petites images*/ 
-{
-    height: 10em;
-    border-radius: 2em 2em;
+    margin-left: 5em;
+    margin-top: 2em;
 }
 
 .ours_img img
@@ -203,31 +195,27 @@ nav > ul li:hover .sous{
     background-color: white;
     border-radius: 2em 2em;
     border: dashed #F8D862 ;
-    grid-column: 1;
-    grid-row:1;
-    margin-left: 5em;
 }
 
-.img1 {
-  grid-column: 2;
-  grid-row: 1;
-}
-.img2 {
-  grid-column: 2;
-  grid-row: 2;
-}
-.img3 {
-  grid-column: 2;
-  grid-row: 3;
+.sous_produit{
+    display: flex;
 }
 
+.sous_produit img /* dimension petites images*/ 
+{
+    height: 10em;
+    border-radius: 2em 2em;
+}
 
 .texte
 {
     position: relative;
-    top: -30.8em;
-    margin-left: 50em;
     color: #402A12;
+    max-width: 37%;
+    margin-top: 1.4em;
+    margin-left: 5em;
+    display: column;
+
 }
 
 .texte h1 /* titre */ 
@@ -244,36 +232,6 @@ nav > ul li:hover .sous{
 .texte p {
     margin-bottom: 1em;
     text-align: justify;
-    padding-right: 2em;
-}
-
-/* Bouton quantité */
-.bouton_qt label {
-    grid-column: 1;
-    grid-row: 1;
-    font-size: 1.2em;
-    color: #2E1E0D;
-    }
-
-.bouton_qt input {
-    grid-column: 1;
-    grid-row: 2;
-    margin-top: 4em;
-    width: 4em;
-    font-size: 1.2em;
-    color: #2E1E0D;
-    border-width: 0.2em;
-    border-color: #2E1E0D ;
-}
-
-.bouton_qt {
-    display: grid;
-    grid-template-columns: repeat (2, 1em);
-    grid-auto-rows: minmax(0em, 2em); 
-    position: absolute;
-    bottom: -5.5em;
-    left: 5em;
-
 }
 
 /*Bouton ajouter panier*/
@@ -282,9 +240,155 @@ nav > ul li:hover .sous{
     font-size: 1.2em;
     color: white ;
     width: 10em;
-    position: relative;
-    right: 46em;
-    top: -15.9em;
     border-width: 0.2em;
     border-color: #2E1E0D ;
+    margin-right: 30%;
+    margin-top: 20%;
+}
+
+
+
+
+
+
+/*Responsive*/ 
+
+@media screen and (max-width: 1024px)
+{
+    #bloc_page
+    {
+        width: auto;
+    }
+
+    .produit_page
+    {
+        width: 100%;
+    }
+
+    .titre
+    {
+        font-size: 3em;
+    }
+
+    .home, .panier
+    {
+        width: 3em;
+        height: auto;
+    }
+
+    .logo
+    {
+        width: 4em;
+        height: auto;
+    }
+
+
+    input {
+        max-width: 7em;
+        font-size: 0.5em;
+        top: -5em;
+    }
+
+    .loupe
+    {
+        max-width: 1em;
+        height: auto;
+    }
+
+    button
+    {
+        max-width: 1em;
+        height: auto;
+        top: -3em;
+    }
+
+
+
+
+    nav{
+        width: 100%;
+    }
+
+    nav ul li{
+        width: 100%;
+    }
+
+
+    .sous{
+        width: 100%;
+        }
+
+    .sous li{
+        width: 100%;
+    }
+
+
+    nav ul li {
+        font-size: 0.8em;
+    }
+
+    /* Produit */ 
+    .chemin
+    {
+        font-size: 0.5em;
+    }
+
+    .retourner a{
+        padding-right: 1em;
+        top: 1.2em;
+        font-size: 0.8em;
+        left: 13em;
+        padding-top: 1em;
+    }
+
+    .produit
+    {
+        margin-left: 1em;
+        margin-top: 2em;
+    }
+
+    .ours_img img
+    {
+        width: auto;
+        max-height: 21em;
+    }
+
+    .sous_produit img /* dimension petites images*/ 
+    {
+        height: 7em;
+        width: auto;
+    }
+
+        .texte
+    { 
+        font-size: 0.7em;
+        top: 2em;
+
+    }
+
+    .texte h1 /* titre */ 
+    {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+    }
+
+    .texte h2{
+        margin-bottom: 0.5em;
+    }
+
+    .texte p {
+        margin-bottom: 1em;
+        text-align: justify;
+    }
+
+    /*Bouton ajouter panier*/ 
+    .ajouter_panier input{
+        max-width: 10em;
+    }
+
+
+
+
+
+    
 }
